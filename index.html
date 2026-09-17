@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AppFactoryDevelopment creates practical, privacy-conscious mobile apps." />
+  <meta name="theme-color" content="#2f211c" />
+  <title>AppFactoryDevelopment</title>
+  <style>
+    :root {
+      --bg: #1f1714;
+      --surface: #2a1f1a;
+      --surface-2: #352720;
+      --text: #f5ede7;
+      --muted: #cdbfb5;
+      --accent: #c8795e;
+      --accent-soft: #f0cfc2;
+      --line: rgba(255,255,255,.10);
+      --shadow: 0 18px 50px rgba(0,0,0,.28);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(200,121,94,.14), transparent 34rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(14px);
+      background: rgba(31,23,20,.84);
+      z-index: 20;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+
+    .mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--accent);
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow);
+      font-weight: 800;
+      color: #241713;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      padding: 96px 0 72px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--accent-soft);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.02;
+      margin: 0 0 22px;
+      letter-spacing: -0.04em;
+      max-width: 780px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 19px;
+      max-width: 720px;
+      margin: 0 0 30px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid var(--line);
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #241713;
+      border-color: transparent;
+    }
+
+    .btn.secondary {
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, var(--surface), var(--surface-2));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card .icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      background: #f1dfd5;
+      color: #3b2720;
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+      margin-bottom: 22px;
+    }
+
+    .hero-card h2 {
+      margin: 0 0 10px;
+      font-size: 28px;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin: 0 0 10px;
+      letter-spacing: -.02em;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      margin: 0 0 28px;
+      max-width: 760px;
+    }
+
+    .product {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 26px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .product h3 {
+      font-size: 24px;
+      margin: 0 0 8px;
+    }
+
+    .product p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .product-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0 44px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 64px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .product {
+        grid-template-columns: 1fr;
+      }
+
+      .product-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="/">
+          <span class="mark">AF</span>
+          <span>AppFactoryDevelopment</span>
+        </a>
+        <div class="nav-links">
+          <a href="#apps">Apps</a>
+          <a href="mailto:appfactorydev.support@gmail.com">Support</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Useful apps. Simple by design.</div>
+          <h1>Practical mobile tools built for everyday use.</h1>
+          <p class="lead">
+            AppFactoryDevelopment creates focused Android apps that solve small,
+            real problems without unnecessary complexity.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="#apps">View apps</a>
+            <a class="btn secondary" href="mailto:appfactorydev.support@gmail.com">Contact support</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="icon" aria-hidden="true">✓</div>
+          <h2>Warranty Wallet</h2>
+          <p>
+            Keep warranties, receipts, documents, photos and expiration reminders
+            organized in one place.
+          </p>
+        </div>
+      </section>
+
+      <section id="apps">
+        <h2 class="section-title">Our apps</h2>
+        <p class="section-copy">
+          Small utilities designed to be clear, useful and respectful of your data.
+        </p>
+
+        <article class="product">
+          <div>
+            <h3>Warranty Wallet</h3>
+            <p>
+              Track product warranties, store supporting documents, set reminders,
+              and create encrypted backups for moving your data to a new phone.
+            </p>
+          </div>
+
+          <div class="product-links">
+            <a class="btn secondary" href="warranty-wallet/privacy-policy.html">Privacy policy</a>
+            <a class="btn secondary" href="mailto:appfactorydev.support@gmail.com?subject=Warranty%20Wallet%20Support">Support</a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>© 2026 AppFactoryDevelopment</div>
+      <div class="footer-links">
+        <a href="mailto:appfactorydev.support@gmail.com">appfactorydev.support@gmail.com</a>
+        <a href="warranty-wallet/privacy-policy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
