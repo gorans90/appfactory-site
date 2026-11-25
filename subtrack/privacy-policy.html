@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy for SubTrack</title>
+  <meta name="description" content="Privacy policy for the SubTrack Android app by AppFactoryDevelopment.">
+  <style>
+    :root{color-scheme:light dark;--paper:#fffaf2;--ink:#38251d;--muted:#705d53;--accent:#a84f34;--line:#ddcbb9}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    main{width:min(760px,calc(100% - 32px));margin:0 auto;padding:48px 0 72px}h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;margin:0 0 8px}h2{font-size:1.3rem;margin-top:2.2rem}a{color:var(--accent)}.meta,.notice{color:var(--muted)}.notice{border-left:4px solid var(--accent);padding:10px 16px;background:#f6eadc;border-radius:4px}li{margin:.35rem 0}@media(prefers-color-scheme:dark){:root{--paper:#211713;--ink:#f6eadc;--muted:#cfbcae;--accent:#ee9878;--line:#5a4439}.notice{background:#35251e}}
+    .site-nav{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:24px;font-size:15px}main{overflow-wrap:anywhere}
+  </style>
+</head>
+<body>
+<main>
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="../index.html">AppFactoryDevelopment</a>
+    <a href="../index.html#apps">Apps</a>
+    <a href="mailto:appfactorydev.support@gmail.com?subject=SubTrack%20Support">Support</a>
+  </nav>
+  <h1>Privacy Policy for SubTrack</h1>
+  <p class="meta"><strong>Effective date:</strong> <time datetime="2026-11-25">November 25, 2026</time><br>
+    <strong>Publisher:</strong> AppFactoryDevelopment<br>
+    <strong>Android package:</strong> <code>com.appfactory.subtrack.app</code></p>
+
+  <h2>1. About SubTrack</h2>
+  <p>SubTrack is an independent Android app for tracking subscriptions, managing recurring expenses, and getting renewal reminders. It does not provide banking, investment, payment processing, or subscription cancellation services.</p>
+
+  <h2>2. Local data storage</h2>
+  <p>You can enter subscription names, prices, currencies, billing cycles, categories, statuses, trial details, notes, and reminder preferences. SubTrack stores your core records in private app storage on your Android device. You can use SubTrack without an account, and the app does not automatically sync subscription records to the cloud.</p>
+
+  <h2>3. Smart Add</h2>
+  <p>You can import screenshots, images, PDFs, or text that you paste or share to the app. Google ML Kit recognizes text in images and PDFs on your device. The SDK may collect usage and diagnostic information. <a href="https://developers.google.com/ml-kit/terms">Google ML Kit terms and privacy</a></p>
+  <p>If you choose cloud AI analysis, SubTrack sends the extracted or entered text over HTTPS to its backend on Render for processing with the OpenAI API. The request includes limited context such as your locale, local date, and matching public service catalog entries. SubTrack does not upload the original images or PDFs to its AI backend.</p>
+  <p>Imported text can contain personal information. You can review and edit it before submitting it. Remove sensitive details that are unnecessary for the analysis. Review the suggested subscription details before saving them.</p>
+
+  <h2>4. AI Spending Review</h2>
+  <p>When you request a spending review, SubTrack sends a limited summary to its backend for OpenAI processing. This may include service names, categories, costs, billing information, currencies, and trial details. The feature does not require access to your bank accounts, payment card numbers, email accounts, or contacts. Suggestions are informational and may be inaccurate.</p>
+
+  <h2>5. AI controls and consent</h2>
+  <p>AI features are available by default. Cloud analysis requires you to acknowledge the applicable in-app disclosure and explicitly request the analysis. SubTrack does not run background AI analysis or automatically upload your subscriptions.</p>
+  <p>You can disable AI features in Settings. This prevents new AI analysis requests and leaves manual subscription management available. Disabling AI does not recall data already sent.</p>
+
+  <h2>6. AI providers and retention</h2>
+  <p>Render hosts the <a href="https://subtrack-smartadd.onrender.com">SubTrack backend</a>. OpenAI processes requests from Smart Add and AI Spending Review. The backend is designed to avoid retaining submitted text or subscription summaries in application logs or databases.</p>
+  <p>SubTrack sends OpenAI Responses API requests with <code>store:false</code>. Under OpenAI's standard data controls, abuse-monitoring logs may include API content and are generally retained for up to 30 days. OpenAI may retain the information longer when legally required or when needed to protect its services or others from harm. OpenAI does not use API content to train its models by default.</p>
+  <ul>
+    <li><a href="https://developers.openai.com/api/docs/guides/your-data">OpenAI API data controls</a></li>
+    <li><a href="https://openai.com/policies/privacy-policy/">OpenAI Privacy Policy</a></li>
+    <li><a href="https://render.com/privacy">Render Privacy Policy</a></li>
+  </ul>
+
+  <h2>7. Advertising and privacy choices</h2>
+  <p>The Free version may display Google AdMob ads when advertising is configured. SubTrack uses Google's User Messaging Platform (UMP) to present applicable consent choices and let you revisit them through the app's advertising privacy options when available. Pro removes in-app advertising.</p>
+  <p>Depending on configuration, your choices, and applicable law, Google and participating ad providers may process IP addresses, approximate location, device or advertising identifiers, app interactions, and diagnostics for advertising, measurement, and fraud prevention. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></p>
+
+  <h2>8. Google Play Billing</h2>
+  <p>SubTrack offers an optional one-time Pro purchase through Google Play Billing. Google processes payments and transaction information. SubTrack does not directly receive or store payment card details. The app may process purchase entitlement information to manage and restore Pro access and cache limited entitlement status on your device.</p>
+
+  <h2>9. Exchange rates</h2>
+  <p>SubTrack gets reference exchange rates from the Frankfurter API to estimate spending in your chosen display currency. Requests do not send subscription names, notes, or individual subscription prices. The service may receive standard HTTPS request information such as your IP address. Exchange rates and estimated totals are informational.</p>
+
+  <h2>10. Notifications</h2>
+  <p>SubTrack uses Android's notification and scheduling services for renewal and trial reminders. You can manage reminder preferences in SubTrack and control notification permissions in Android settings.</p>
+
+  <h2>11. Backups and exports</h2>
+  <p>You can create password-protected encrypted backups and use them to restore your records. You choose where to store them, including local storage or a third-party document provider. SubTrack does not automatically upload backups. A provider you choose handles your files under its own privacy terms.</p>
+  <p>SubTrack generates CSV and PDF exports at your request and does not encrypt those exports. Keep exported files and backup passwords secure.</p>
+
+  <h2>12. Data retention and deletion</h2>
+  <p>You can delete individual records or use Delete all data in the app. You can also clear SubTrack's storage in Android settings or uninstall the app to remove app data from your device. Delete exported files and backup copies separately from the locations where you saved them. Local deletion does not remove information that Google, OpenAI, hosting providers, or other third parties retain independently.</p>
+  <p>SubTrack's backend application logs record operational details such as request type, status, and timing for service operation and troubleshooting. Render's dashboard log retention depends on the hosting workspace plan. <a href="https://render.com/docs/logging#retention-period">Render log retention</a></p>
+
+  <h2>13. Security</h2>
+  <p>SubTrack uses Android private app storage for local records, HTTPS for data in transit, and encryption for portable backups. No storage or transmission method can guarantee absolute security.</p>
+
+  <h2>14. International processing and privacy rights</h2>
+  <p>Third-party providers may process information outside your country of residence. Depending on applicable law, you may have rights to access, correct, or delete personal information, restrict or object to processing, or withdraw consent. To ask about these rights or make a request, contact AppFactoryDevelopment at <a href="mailto:appfactorydev.support@gmail.com">appfactorydev.support@gmail.com</a>.</p>
+
+  <h2>15. Children's privacy</h2>
+  <p>SubTrack is intended for adults who manage subscriptions and recurring expenses. It is not designed specifically for children.</p>
+
+  <h2>16. Policy updates and contact</h2>
+  <p>AppFactoryDevelopment may update this policy as the app, its services, or legal requirements change. The updated policy will show its effective date. We will communicate material changes when required.</p>
+  <p>For privacy or support questions, contact AppFactoryDevelopment at <a href="mailto:appfactorydev.support@gmail.com">appfactorydev.support@gmail.com</a>.</p>
+</main>
+</body>
+</html>
